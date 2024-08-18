@@ -14,13 +14,13 @@ const PORT = process.env.PORT || 5007;
   };
 
   await api.init(config);
-  await api.downloadBudget(config.budgetId);
-
-  const now = new Date();
-  const currentYearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
 
   app.get('/api/budget', async (req, res) => {
     try {
+      await api.downloadBudget(config.budgetId);
+
+      const now = new Date();
+      const currentYearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
       let budget = await api.getBudgetMonth(currentYearMonth);
 
       budget.totalBudgeted = budget.totalBudgeted / 100;
