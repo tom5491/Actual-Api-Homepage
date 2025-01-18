@@ -1,9 +1,10 @@
 {
   "dependencies": {
-    "@actual-app/api": "^6.9.0",
+    "@actual-app/api": "^25.1.0",
     "axios": "^1.7.4",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
   },
   "name": "actual-api",
   "version": "1.0.0",

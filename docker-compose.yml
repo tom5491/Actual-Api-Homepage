@@ -3,11 +3,11 @@ services:
   app:
     build: .
     ports:
-      - "5007:5007"
+      - "${PORT}:5007"
     environment:
       - DATA_DIR=${DATA_DIR}
       - SERVER_URL=${SERVER_URL}
       - PASSWORD=${PASSWORD}
-      - BUDGET_ID=${BUDGET_ID}
+      - SYNC_ID=${SYNC_ID}
     volumes:
       - ./data:/usr/src/app/data
