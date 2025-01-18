@@ -1,0 +1,30 @@
+# snippet for actual custom api widget
+- Actual:
+    icon: actual.png
+    href: http://192.168.0.1:5006
+    siteMonitor: http://192.168.0.1:5006
+    statusStyle: "dot"
+    description: "Monies (this month)"
+    widget:
+      type: customapi
+      url: http://192.168.0.1:5007/api/budget
+      refreshInterval: 10000 # in milliseconds
+      method: GET
+      display: block
+      mappings:
+        - field: totalBudgeted
+          label: Total Budgeted
+          format: number
+          prefix: "£"
+        - field: totalIncome
+          label: Total Income
+          format: number
+          prefix: "£"
+        - field: totalSpent
+          label: Total Spent
+          format: number
+          prefix: "£"
+        - field: totalBalance
+          label: Total Balance
+          format: number
+          prefix: "£"
