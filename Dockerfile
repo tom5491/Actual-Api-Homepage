@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:22
 
 WORKDIR /usr/src/app
 
@@ -12,6 +12,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE ${process.env.PORT}
+EXPOSE 5007
 
 CMD ["node", "index.js"]
